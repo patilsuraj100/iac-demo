@@ -9,7 +9,7 @@ resource "aws_vpc" "my_vpc" {
 resource "aws_subnet" "my_subnet" {
   vpc_id            = aws_vpc.my_vpc.id
   cidr_block        = "172.16.10.0/24"
-  availability_zone = "ap-south-1a"
+  availability_zone = "us-east-2a"
 
   tags = {
     Name = "tf-example"
@@ -26,7 +26,7 @@ resource "aws_network_interface" "foo" {
 }
 
 resource "aws_instance" "foo" {
-  ami           = "ami-0a9d27a9f4f5c0efc" # ap-south-1
+  ami           = "ami-03d64741867e7bb94" # us-east-2a
   instance_type = "t2.micro"
 
   network_interface {

@@ -1,9 +1,9 @@
 # variables.tf
 variable "access_key" {
-     default = "<PUT IN YOUR AWS ACCESS KEY>"
+     default = "AKIAI43XAFPN6ZJIXMDQ"
 }
 variable "secret_key" {
-     default = "<PUT IN YOUR AWS SECRET KEY>"
+     default = "zH3c/5VwN6A3mXg/n/C4BIimSGghOH88rjsCc5m1"
 }
 variable "region" {
      default = "us-east-1"

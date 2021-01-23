@@ -1,13 +1,3 @@
-provider "aws" {
-  region = "us-east-1"
-  access_key = "AKIAI56OVUB5MO3VYHJQ"
-  secret_key = "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"
-}
-
-resource "aws_vpc" "main" {
-  cidr_block       = "10.0.0.0/16"
-}
-
 resource "aws_internet_gateway" "gw" {
   vpc_id = aws_vpc.main.id
 }
@@ -25,7 +15,7 @@ resource "aws_route_table" "r" {
     gateway_id = aws_internet_gateway.gw.id
 }
 	}
-resources "aws_subnet" "subnet1" {
+resource "aws_subnet" "subnet1" {
 	vpc_id = aws_vpc.main.id
 	cidr_block = "10.0.1.0/24"
 	availability_zone = "us-east-1a"

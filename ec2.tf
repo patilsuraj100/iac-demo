@@ -51,7 +51,6 @@ resource "aws_network_interface" "test" {
   subnet_id       = aws_subnet.subnet1.id
   private_ips     = ["10.0.0.50"]
   security_groups = [aws_security_group.allow_tls.id]
-  security_groups = 
 }
 
 resource "aws_eip" "lb" {
